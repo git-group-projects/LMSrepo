@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}Contact{% endblock title %}
+{% block contactactive %}active{% endblock contactactive %}
 {% block content %}
 <div class="container">
 <div class="h2 my-3 d-flex justify-content-first">Contact Administration</div>
@@ -22,7 +23,7 @@
     <label for="complaint" class="form-label">Post your complaint:</label>
     <textarea name="complaint" class="form-control" id="complaint" cols="30" rows="4"></textarea>
   </div>
-  <button type="submit" class="btn btn-success">Submit</button>
+  <button type="submit" class="btn btn-info text-light">Submit</button>
 </form>
 </div>
 {% endblock content %}

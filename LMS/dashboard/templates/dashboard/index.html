@@ -1,2 +1,23 @@
 {% extends 'base.html' %}
 {% block title %}Dashboard Index{% endblock title %}
+{% block dashboardactive %}active{% endblock dashboardactive %}
+{% block content %}
+
+  <div class="container my-3">
+  <h2 class="my-3">Subjects:</h2>
+    <div class="card">
+    <div class="card-header">
+    Featured
+    </div>
+    <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <div class="mb-1 text-muted">Nov 12</div>
+    <p class="card-text mb-2">With supporting text below as a natural lead-in to additional content.</p>
+
+    <a href="/dashboard/post" class="btn btn-info text-light">Go somewhere</a>
+    </div>
+    </div>
+    </div>
+
+{% endblock content %}
+

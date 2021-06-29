@@ -1,5 +1,31 @@
 {% extends 'base.html' %}
 {% block title %} Home {% endblock title %}
+{% block homeactive %}active{% endblock homeactive %}
 {% block content %}
-    <h1>This is Home</h1>
+    <div class="container my-3">
+        <div class="jumbotron">
+        <h1 class="display-4">Welcome!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+            <a class="btn btn-info text-light btn-lg" href="/dashboard" role="button">Learn more</a>
+        </p>
+        </div>
+    </div>
+    <div class="container">
+    <div class="card">
+    <div class="card-header">
+    Featured
+    </div>
+    <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <div class="mb-1 text-muted">Nov 12</div>
+    <p class="card-text mb-2">With supporting text below as a natural lead-in to additional content.</p>
+
+    <a href="/dashboard/post" class="btn btn-info text-light">Go somewhere</a>
+    </div>
+    </div>
+    </div>
+    
 {% endblock %}
