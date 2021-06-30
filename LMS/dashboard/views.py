@@ -9,7 +9,7 @@ def index(request):
     context = {"posts":posts}
     return render(request, 'dashboard/index.html',context)
 
-def post(request):
+def post(request,slug):
     # posts = Post.objects.all()
     # context = {"posts":posts}
     return render(request, 'dashboard/post.html')

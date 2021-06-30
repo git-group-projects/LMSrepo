@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('comment/', views.comment, name='comment'),
-    path('post/', views.post, name='post'),
+    path('<str:slug>', views.post, name='post'),
 ]
