@@ -1,11 +1,14 @@
 from django.shortcuts import render, HttpResponse
 from .models import Contact
 from django.contrib import messages
+from dashboard.models import Post
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'home/home.html')
+    posts = Post.objects.all()
+    context = {"posts":posts}
+    return render(request, 'home/home.html',context)
 
 def about(request):
     return render(request, 'home/about.html')

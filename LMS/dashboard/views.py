@@ -3,15 +3,21 @@ from django.http import HttpResponse
 from dashboard.models import Post, BlogComment 
 # Create your views here.
 
-def index(request):
-    return render(request, 'dashboard/index.html')
 
-def post(request, slug):
+def index(request):
+    posts = Post.objects.all()
+    context = {"posts":posts}
+    return render(request, 'dashboard/index.html',context)
+
+def post(request):
+    # posts = Post.objects.all()
+    # context = {"posts":posts}
     return render(request, 'dashboard/post.html')
-    # return HttpResponse(f'Hello, this is {slug}')
 
 def comment(request):
-    return render(request, 'dashboard/comments.html')   
+    comments = BlogComment.objects.all()
+    context = {"comments": comments}
+    return render(request, 'dashboard/comments.html', context)   
 
 def postComment(request,slug):
     if request.method=='POST':

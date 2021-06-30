@@ -4,18 +4,21 @@
 {% block content %}
   <div class="container my-3">
   <h2 class="my-3">Subjects:</h2>
-    <div class="card">
+  {% for post in posts %}
+    <div class="card my-3">
     <div class="card-header">
     Featured
     </div>
     <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <div class="mb-1 text-muted">Nov 12</div>
-    <p class="card-text mb-2">With supporting text below as a natural lead-in to additional content.</p>
+    <h5 class="card-title">{{post.title}}</h5>
+    <div class="mb-1 text-muted">{{post.timestamp}}</div>
+    <p class="card-text mb-2">{{post.content}}</p>
 
     <a href="/dashboard/post" class="btn btn-info text-light">Read more</a>
     </div>
     </div>
+  {% endfor %}
+  <a href="#" class="btn btn-secondary my-4 text-light">Add Subjects</a>
     </div>
 
 {% endblock content %}

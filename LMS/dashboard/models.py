@@ -12,7 +12,7 @@ class Post(models.Model):
     timestamp = models.DateTimeField(blank=True)
 
     def __str__(self):
-        return self.title + ' ' +self.author
+        return self.title + ' by ' +self.author
     
 
 class BlogComment(models.Model):
