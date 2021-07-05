@@ -10,9 +10,9 @@ def index(request):
     return render(request, 'dashboard/index.html',context)
 
 def post(request,slug):
-    # posts = Post.objects.all()
-    # context = {"posts":posts}
-    return render(request, 'dashboard/post.html')
+    post = Post.objects.filter(slug=slug).first()
+    context = {"post":post}
+    return render(request, 'dashboard/post.html', context)
 
 def comment(request):
     comments = BlogComment.objects.all()
