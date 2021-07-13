@@ -11,10 +11,10 @@ main {
 
 .b-example-divider {
   flex-shrink: 0;
-  width: 0.5rem;
+  width: 0.1rem;
   height: 100vh;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
+  background-color: rgba(248, 244, 244, 0.1);
+  border: solid rgba(248, 243, 243, 0.15);
   border-width: 1px 0;
   box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
@@ -79,3 +79,29 @@ main {
 
 .fw-semibold { font-weight: 600; }
 .lh-tight { line-height: 1.25; }
+
+.post-right
+{
+  background-color: lightsalmon;
+  width: 74.7%;
+  overflow-y: scroll !important;
+  overflow-x: unset;
+}
+.video-container
+{
+  background-color: lightslategray;
+  width: 100%;
+  height: 50rem;
+
+}
+.comments-container
+{
+  background-color: white;
+  width: 100%;
+  border: 0.01px solid rgb(116, 110, 110);
+  border-radius: 3px;
+}
+.comments-container .title
+{
+  border-radius: 3px;
+}

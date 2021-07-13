@@ -14,6 +14,21 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title + ' by ' +self.author
+
+class Chapters(models.Model):
+    sno = models.AutoField(primary_key=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    title = models.TextField(max_length=25)
+    
+    def __str__(self):
+        return self.chapter_title
+
+class ChaptersSubTitles(models.Model):
+    sno= models.AutoField(primary_key=True)
+    title = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.title
     
 
 class BlogComment(models.Model):
